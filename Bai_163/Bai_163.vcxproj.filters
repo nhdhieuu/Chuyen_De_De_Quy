@@ -14,12 +14,9 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
-    <ClCompile Include="Bai_255.cpp">
+    <ClCompile Include="Bai_163.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-=======
->>>>>>> 0f67c5179e028014f24e92203c322a9b7ff3ff2e
 </Project>
