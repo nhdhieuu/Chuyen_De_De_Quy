@@ -11,7 +11,7 @@ int main()
 	return 1;
 }
 
-float TongGiaTri(float a[], int n)
+float TongDuong(float a[], int n)
 {
 	if (n == 0)
 		return 0;

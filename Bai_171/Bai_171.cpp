@@ -1,7 +1,7 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 int DemConGiam(int[], int);
-int DemConGiam(int [],int , int);
+int DemConGiam(int[], int, int);
 bool ktTang(int[], int, int);
 int main() {
 	int n;
@@ -12,8 +12,8 @@ int main() {
 		cout << "Nhap a[" << i << "]: ";
 		cin >> a[i];
 	}
-	int kq = DemConGiam(a,n);
-	cout << "So mang con tang trong mang la: " << kq;
+	int kq = DemConGiam(a, n);
+	cout << "So mang con giam trong mang la: " << kq;
 	delete[]a;
 	return 0;
 }
@@ -24,19 +24,19 @@ int DemConGiam(int a[], int n) {
 	}
 	return dem;
 }
-int DemConGiam(int a[], int begin ,int end) {
+int DemConGiam(int a[], int begin, int end) {
 	if (begin == end - 1)
 		return 0;
 	if (ktTang(a, begin, end))
 	{
-		return 1 + DemConGiam(a,begin,end - 1) ;
+		return 1 + DemConGiam(a, begin, end - 1);
 	}
 	else
 		return DemConGiam(a, begin, end - 1);
 }
 bool ktTang(int a[], int begin, int end) {
-	for (int i = begin; i < end-1; i++) {
-		if (a[i] > a[i + 1])
+	for (int i = begin; i < end - 1; i++) {
+		if (a[i] < a[i + 1])
 			return 0;
 	}
 	return 1;

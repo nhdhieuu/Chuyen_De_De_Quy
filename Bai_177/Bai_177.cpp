@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 void DuaVeCuoi(int[], int);
+bool ktNguyenTo(int);
 int main() {
 	int n;
 	cout << "Nhap so phan tu: ";
@@ -17,15 +18,22 @@ int main() {
 	delete[]a;
 	return 0;
 }
+bool ktNguyenTo(int n)
+{
+	for (int i = 2;i <= sqrt(n);i++)
+		if (n % i == 0)
+			return 0;
+	return 1;
+}
 void DuaVeCuoi(int a[], int n) {
 	if (n == 0)
 		return;
-	if (a[n - 1] % 3 != 0) {
+	if (ktNguyenTo(a[n-1])==1) {
 		DuaVeCuoi(a, n - 1);
 		return;
 	}
-	for(int i = 0 ; i<= n - 2; i ++)
-		if (a[i] % 3 != 0)
+	for (int i = 0; i <= n - 2; i++)
+		if (ktNguyenTo(a[n-1]))
 		{
 			swap(a[n - 1], a[i]);
 			break;

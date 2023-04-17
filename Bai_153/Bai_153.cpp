@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void DuongTang(float[], int);
+void SapTang(float[], int n);
 int main() {
 	int n;
 	cout << "Nhap so phan tu: ";
@@ -10,7 +10,7 @@ int main() {
 		cout << "Nhap a[" << i << "]: ";
 		cin >> a[i];
 	}
-	DuongTang(a, n);
+	SapTang(a, n);
 	cout << "Mang sau khi duoc sap tang: " << endl;
 	for (int i = 0; i < n; i++) {
 		cout << a[i] << " ";
@@ -18,14 +18,12 @@ int main() {
 	delete[]a;
 	return 0;
 }
-void DuongTang(float a[], int n)
+void SapTang(float a[], int n)
 {
-	if (n == 1)
+	if (n == 0)
 		return;
-	for (int i = 0; i < n-1; i++)
-	{
-		if (a[i] > 0 && a[n - 1] > 0 && a[i] > a[n - 1])
+	for (int i = 0;i < n - 1;i++)
+		if (a[i] > a[n - 1])
 			swap(a[i], a[n - 1]);
-		DuongTang(a, n);
-	}
+	SapTang(a, n - 1);
 }
